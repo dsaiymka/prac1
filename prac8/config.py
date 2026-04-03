@@ -1,7 +1,7 @@
 def load_config():
     return {
         "host": "localhost",
-        "database": "phonebook",
-        "user": "postgres",
-        "password": "your_password"
+        "database": "database_bd",  
+        "user": "database_bd",      
+        "password": "00000000"      
     }
