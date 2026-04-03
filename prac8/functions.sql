@@ -1,4 +1,8 @@
--- 1. Function: search by pattern
+-- ========================================
+-- FUNCTIONS FOR PHONEBOOK
+-- ========================================
+
+-- 1. Function: search contacts by pattern
 CREATE OR REPLACE FUNCTION search_contacts(p_pattern TEXT)
 RETURNS TABLE(name VARCHAR, surname VARCHAR, phone VARCHAR) AS $$
 BEGIN
@@ -12,7 +16,7 @@ END;
 $$ LANGUAGE plpgsql;
 
 
--- 2. Function: pagination
+-- 2. Function: get contacts with pagination
 CREATE OR REPLACE FUNCTION get_contacts_paginated(p_limit INT, p_offset INT)
 RETURNS TABLE(name VARCHAR, surname VARCHAR, phone VARCHAR) AS $$
 BEGIN
